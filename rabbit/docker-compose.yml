@@ -1,0 +1,12 @@
+version: '2'
+services:
+  rabbitmq:
+    container_name: teste-rabbit-server
+    image: rabbitmq:3-management
+    network_mode: bridge
+    ports:
+        - 15672:15672
+        - 5672:5672
+    environment:
+        - HOSTNAMES=rabbit1.teste
+

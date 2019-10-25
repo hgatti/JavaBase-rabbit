@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+
+  postgres-fidc-test:
+    image: postgres
+    container_name: java-base
+    hostname: 'base.java.postgres'
+    ports:
+        - 5432:5432
+    network_mode: bridge
+    environment:
+      - POSTGRES_DB=java-base
+      - POSTGRES_USER=java-base_adm
+      - POSTGRES_PASSWORD=java-base_adm
+      - HOSTNAME=base.java.postgres
+      
